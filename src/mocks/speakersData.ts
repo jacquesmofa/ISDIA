@@ -1,0 +1,133 @@
+export interface Speaker {
+  id: string;
+  name: string;
+  title: string;
+  organization: string;
+  bio: string;
+  image: string;
+  track: string;
+  sessionTitle: string;
+  day: number;
+  featured: boolean;
+  initials: string;
+}
+
+export const allSpeakers: Speaker[] = [
+  {
+    id: 'sp1',
+    name: 'Dr. Amina Okafor',
+    title: 'UN Special Rapporteur on Disability Rights',
+    organization: 'United Nations Human Rights Council',
+    bio: 'Dr. Okafor has spent over two decades advancing disability rights within international legal frameworks. She led the drafting of the African Disability Protocol and has advised 15+ national governments on inclusive policy development.',
+    image: 'https://readdy.ai/api/search-image?query=Professional%20African%20woman%20in%20her%20fifties%20wearing%20a%20dark%20blazer%20with%20warm%20confident%20expression%2C%20headshot%20portrait%20against%20a%20soft%20gradient%20background%20with%20golden%20tones%2C%20editorial%20quality%2C%20professional%20lighting&width=500&height=600&seq=speaker-amina-full-01&orientation=portrait',
+    track: 'Track A',
+    sessionTitle: 'Opening Keynote: The Future of Inclusive Employment',
+    day: 1,
+    featured: true,
+    initials: 'AO',
+  },
+  {
+    id: 'sp2',
+    name: 'Prof. James Hartford',
+    title: 'Director, Global Accessibility Initiative',
+    organization: 'MIT Media Lab',
+    bio: 'A pioneer in accessible AI and machine learning, Prof. Hartford has published over 100 papers on inclusive technology design. His lab developed award-winning assistive technologies used by millions worldwide.',
+    image: 'https://readdy.ai/api/search-image?query=Professional%20man%20in%20his%20forties%20with%20glasses%20wearing%20a%20navy%20suit%2C%20confident%20headshot%20portrait%20against%20a%20warm%20gradient%20background%2C%20editorial%20photography%20style%2C%20soft%20golden%20lighting&width=500&height=600&seq=speaker-james-full-02&orientation=portrait',
+    track: 'Track B',
+    sessionTitle: 'Accessible AI: Building ML Systems That Serve Everyone',
+    day: 1,
+    featured: true,
+    initials: 'JH',
+  },
+  {
+    id: 'sp3',
+    name: 'Maria Consuelo Rivera',
+    title: 'Chief Inclusion Officer',
+    organization: 'Microsoft Global Accessibility',
+    bio: 'Maria leads Microsoft\'s global accessibility strategy, overseeing the company\'s commitment to inclusive design across all products. Under her leadership, Microsoft\'s accessibility features have reached over 1 billion users.',
+    image: 'https://readdy.ai/api/search-image?query=Professional%20Latina%20woman%20in%20her%20forties%20wearing%20a%20cream%20blazer%2C%20warm%20headshot%20portrait%20against%20a%20soft%20gradient%20background%20with%20golden%20accents%2C%20editorial%20quality%2C%20professional%20lighting&width=500&height=600&seq=speaker-maria-full-03&orientation=portrait',
+    track: 'Track A',
+    sessionTitle: 'Panel: Corporate Accessibility — From Compliance to Culture',
+    day: 1,
+    featured: true,
+    initials: 'MR',
+  },
+  {
+    id: 'sp4',
+    name: 'Rajesh Kapoor',
+    title: 'Global Head of Supplier Diversity',
+    organization: 'Unilever',
+    bio: 'Rajesh has transformed Unilever\'s global supply chain to prioritize disability-owned businesses, creating over 5,000 new supplier partnerships with enterprises led by persons with disabilities.',
+    image: 'https://readdy.ai/api/search-image?query=Professional%20South%20Asian%20man%20in%20his%20fifties%20wearing%20a%20dark%20suit%20with%20a%20warm%20smile%2C%20headshot%20portrait%20against%20a%20soft%20gradient%20background%2C%20editorial%20quality%2C%20professional%20lighting&width=500&height=600&seq=speaker-rajesh-04&orientation=portrait',
+    track: 'Track A',
+    sessionTitle: 'Inclusive Supply Chains & Supplier Diversity',
+    day: 2,
+    featured: false,
+    initials: 'RK',
+  },
+  {
+    id: 'sp5',
+    name: 'Dr. Yuki Tanaka',
+    title: 'Lead Researcher',
+    organization: 'Sony Accessibility Lab',
+    bio: 'Dr. Tanaka develops next-generation AR/VR solutions for accessibility. Her team\'s haptic feedback navigation system for visually impaired users won the 2026 Global Accessibility Innovation Award.',
+    image: 'https://readdy.ai/api/search-image?query=Professional%20Japanese%20woman%20in%20her%20thirties%20wearing%20a%20modern%20black%20jacket%2C%20confident%20headshot%20against%20a%20soft%20gradient%20background%2C%20editorial%20photography%20style%2C%20warm%20lighting&width=500&height=600&seq=speaker-yuki-05&orientation=portrait',
+    track: 'Track B',
+    sessionTitle: 'Emerging Tech Showcase: AR/VR for Accessibility',
+    day: 2,
+    featured: false,
+    initials: 'YT',
+  },
+  {
+    id: 'sp6',
+    name: 'Ambassador Kwame Asante',
+    title: 'Permanent Representative',
+    organization: 'Permanent Mission of Ghana to the UN',
+    bio: 'Ambassador Asante has been instrumental in advancing disability-inclusive development goals within the UN General Assembly and co-chairs the Group of Friends of the CRPD.',
+    image: 'https://readdy.ai/api/search-image?query=Professional%20African%20man%20in%20his%20sixties%20wearing%20a%20formal%20dark%20suit%20with%20a%20dignified%20expression%2C%20diplomatic%20headshot%20against%20a%20soft%20gradient%20background%2C%20editorial%20quality&width=500&height=600&seq=speaker-kwame-06&orientation=portrait',
+    track: 'Track C',
+    sessionTitle: 'Global Policy Roundtable: UN CRPD Article 27',
+    day: 1,
+    featured: false,
+    initials: 'KA',
+  },
+  {
+    id: 'sp7',
+    name: 'Marcus Okonkwo',
+    title: 'Senior VP of Inclusion',
+    organization: 'Barclays Global',
+    bio: 'Marcus pioneered the financial services industry\'s first comprehensive disability inclusion scorecard, now adopted by 40+ major banks worldwide to benchmark their accessibility performance.',
+    image: 'https://readdy.ai/api/search-image?query=Professional%20African%20man%20in%20his%20forties%20wearing%20a%20tailored%20gray%20suit%20with%20a%20confident%20expression%2C%20headshot%20portrait%20against%20a%20soft%20gradient%20background%2C%20editorial%20quality%2C%20professional%20lighting&width=500&height=600&seq=speaker-marcus-07&orientation=portrait',
+    track: 'Track A',
+    sessionTitle: 'The Business Case for Accessibility: ROI Frameworks',
+    day: 2,
+    featured: false,
+    initials: 'MO',
+  },
+  {
+    id: 'sp8',
+    name: 'Dr. Sophia Williams',
+    title: 'Clinical Psychologist & Workplace Inclusion Specialist',
+    organization: 'Global Neurodiversity Alliance',
+    bio: 'Dr. Williams has spent 18 years researching neurodiversity in professional environments. Her frameworks for psychologically safe workplaces are implemented across major tech and finance companies.',
+    image: 'https://readdy.ai/api/search-image?query=Professional%20woman%20in%20her%20forties%20with%20warm%20expression%20wearing%20a%20soft%20cream%20blazer%2C%20headshot%20portrait%20against%20a%20warm%20gradient%20background%2C%20editorial%20quality%2C%20professional%20lighting&width=500&height=600&seq=speaker-sophia-08&orientation=portrait',
+    track: 'Track A',
+    sessionTitle: 'Mental Health & Neurodiversity in the Workplace',
+    day: 3,
+    featured: false,
+    initials: 'SW',
+  },
+  {
+    id: 'sp9',
+    name: 'Leila Haddad',
+    title: 'Director of Accessible Media',
+    organization: 'BBC',
+    bio: 'Leila oversees accessibility across all BBC platforms, reaching 400M+ weekly viewers. She pioneered real-time AI-powered audio description technology now adopted industry-wide.',
+    image: 'https://readdy.ai/api/search-image?query=Professional%20Middle%20Eastern%20woman%20in%20her%20thirties%20wearing%20a%20modern%20navy%20blazer%2C%20confident%20headshot%20against%20a%20soft%20gradient%20background%2C%20editorial%20photography%20style%2C%20warm%20lighting&width=500&height=600&seq=speaker-leila-09&orientation=portrait',
+    track: 'Track B',
+    sessionTitle: 'Accessible Media & Communications Workshop',
+    day: 2,
+    featured: false,
+    initials: 'LH',
+  },
+];

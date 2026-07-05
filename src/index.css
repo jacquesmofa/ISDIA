@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #FDFCF7;
+  color: #1A1C18;
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: rgba(217, 158, 48, 0.25);
+  color: #1A1C18;
+}
+
+:focus-visible {
+  outline: 3px solid #D99E30;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-secondary-200/40 rounded-2xl;
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-500 hover:border-primary-400/60 hover:bg-white/90 hover:shadow-lg;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary-500 text-white font-semibold rounded-lg 
+           transition-all duration-300 whitespace-nowrap cursor-pointer
+           hover:bg-primary-600 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-3 px-8 py-4 border border-secondary-300 text-foreground-100 font-semibold rounded-lg
+           transition-all duration-300 whitespace-nowrap cursor-pointer
+           hover:border-primary-400 hover:text-primary-600 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-foreground-400 font-medium rounded-lg
+           transition-all duration-300 whitespace-nowrap cursor-pointer
+           hover:text-primary-600 hover:bg-primary-50 focus-visible:ring-2 focus-visible:ring-primary-500;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 md:px-6;
+  }
+
+  .golden-shimmer {
+    @apply relative overflow-hidden;
+  }
+
+  .golden-shimmer::after {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-700;
+    background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.12) 45%, rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0.12) 55%, transparent 60%);
+    background-size: 200% 100%;
+    animation: shimmer-sweep 2.5s ease-in-out infinite;
+  }
+
+  .golden-shimmer:hover::after {
+    @apply opacity-100;
+  }
+
+  .platinum-border {
+    @apply border border-secondary-200/60;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #F2B749 0%, #D99E30 50%, #A67618 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes shimmer-sweep {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes countPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-countPulse {
+  animation: countPulse 1s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up-delay-1 {
+  animation: fadeInUp 0.6s ease-out 0.15s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-2 {
+  animation: fadeInUp 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-3 {
+  animation: fadeInUp 0.6s ease-out 0.45s forwards;
+  opacity: 0;
+}
+
+.honeypot-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}

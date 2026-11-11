@@ -22,7 +22,7 @@ Three-day international summit (6–8 April 2027) on accessible employment, incl
 - Routes: `/`, `/agenda`, `/agenda/builder`, `/archives`, `/call-for-papers`, `/co-hosts`, `/dashboard`, `/faq`, `/gallery`, `/live`, `/login`, `/media/archive`, `/mission`, `/networking`, `/networking/chat`, `/partners`, `/press`, `/register`, `/speakers`, `/sponsors`, `/venue`, `/volunteer`.
 
 ## Deploy
-- No deploy workflow yet. Add the studio FTP workflow once the host is known.
+- No deploy workflow yet. Add the studio FTP workflow (copy `jacquesmofa/SANKOFA/.github/workflows/deploy.yml`) once the host is known.
 
 ## Where things live
 - Pages: `src/pages/<page>/` (one folder per page, sections in `components/`). Routes: `src/router/`.
